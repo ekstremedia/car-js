@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Hide the cursor
+unclutter &
+
+# Set background color
+xsetroot -solid "#000000" &
+
+# Disable screen blanking and DPMS
+xset s off -dpms &

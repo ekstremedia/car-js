@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  js-os:
+    build: .
+    container_name: js-os
+    ports:
+      - "8000:8000"  # Web application
+      - "5900:5900"  # VNC server for viewing the browser display
+    volumes:
+      - ./public:/app/public  # Mount your web app files for easy development
+      - ./server.js:/app/server.js  # Mount server file for easy updates
+    restart: unless-stopped
